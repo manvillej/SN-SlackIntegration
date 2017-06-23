@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<record_update table="sys_processor">
+    <sys_processor action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <class_name/>
+        <description>Processor endpoint for Slash commands.</description>
+        <interactive>false</interactive>
+        <name>Slack Endpoint</name>
+        <parameters>slash</parameters>
+        <params_endpoint>x_47399_slack_slash</params_endpoint>
+        <path>slack</path>
+        <path_endpoint>x_47399_slack_slack</path_endpoint>
+        <require_csrf>false</require_csrf>
+        <roles/>
+        <script><![CDATA[(function process(g_request, g_response, g_processor) {
+	//unique log identifier
+	var app = "Slack";
+	
+	
+	//each of these lines will return an array of strings which we will iterate through
+	var headerNames = String(g_request.getHeaderNames()).split(",");
+	var parameterNames = String(g_request.getParameterNames()).split(",");
+	
+	
+	
+	//log headers
+	for (var i = 0; i<headerNames.length;i++){
+		var header = headerNames[i];
+		var headerValue = g_request.getHeader(header);
+		gs.info("{0} Header: [{1}] has a value of: {2}\n",app,header,headerValue);
+	}
+	
+	//logs parameters
+	for (i = 0; i<parameterNames.length;i++){
+		var parameter = parameterNames[i];
+		var parameterValue = g_request.getParameter(parameter);
+		gs.info("{0} Parameter: [{1}] has a value of: {2}\n",app,parameter,parameterValue);
+	}
+	
+	gs.info("{0} Parameter: [{1}] has a value of: {2}\n",app,"query string",g_request.getQueryString());
+	
+	g_response.setStatus(200);
+	
+})(g_request, g_response, g_processor);]]></script>
+        <sys_class_name>sys_processor</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2017-06-23 18:01:46</sys_created_on>
+        <sys_customer_update>true</sys_customer_update>
+        <sys_id>c53b87dddbab3200544370adbf9619ba</sys_id>
+        <sys_mod_count>13</sys_mod_count>
+        <sys_name>Slack Endpoint</sys_name>
+        <sys_package display_value="Slack" source="x_47399_slack">bcdac3dddbab3200544370adbf9619a2</sys_package>
+        <sys_policy/>
+        <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
+        <sys_scope display_value="Slack">bcdac3dddbab3200544370adbf9619a2</sys_scope>
+        <sys_update_name>sys_processor_c53b87dddbab3200544370adbf9619ba</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2017-06-23 18:56:01</sys_updated_on>
+        <type>script</type>
+    </sys_processor>
+</record_update>

@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<record_update table="sys_public">
+    <sys_public action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <page>x_47399_slack_slack</page>
+        <sys_class_name>sys_public</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2017-06-23 18:13:43</sys_created_on>
+        <sys_customer_update>true</sys_customer_update>
+        <sys_id>86129791dbeb3200544370adbf96194a</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>x_47399_slack_slack</sys_name>
+        <sys_package display_value="Slack" source="x_47399_slack">bcdac3dddbab3200544370adbf9619a2</sys_package>
+        <sys_policy/>
+        <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
+        <sys_scope display_value="Slack">bcdac3dddbab3200544370adbf9619a2</sys_scope>
+        <sys_update_name>sys_public_86129791dbeb3200544370adbf96194a</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2017-06-23 18:13:43</sys_updated_on>
+    </sys_public>
+</record_update>
